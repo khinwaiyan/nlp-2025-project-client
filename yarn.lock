@@ -499,6 +499,130 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-avatar@npm:^1.1.10":
+  version: 1.1.10
+  resolution: "@radix-ui/react-avatar@npm:1.1.10"
+  dependencies:
+    "@radix-ui/react-context": "npm:1.1.2"
+    "@radix-ui/react-primitive": "npm:2.1.3"
+    "@radix-ui/react-use-callback-ref": "npm:1.1.1"
+    "@radix-ui/react-use-is-hydrated": "npm:0.1.0"
+    "@radix-ui/react-use-layout-effect": "npm:1.1.1"
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 10c0/9fb0cf9a9d0fdbeaa2efda476402fc09db2e6ff9cd9aa3ea1d315d9c9579840722a4833725cb196c455e0bd775dfe04221a4f6855685ce89d2133c42e2b07e5f
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-compose-refs@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@radix-ui/react-compose-refs@npm:1.1.2"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/d36a9c589eb75d634b9b139c80f916aadaf8a68a7c1c4b8c6c6b88755af1a92f2e343457042089f04cc3f23073619d08bb65419ced1402e9d4e299576d970771
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-context@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@radix-ui/react-context@npm:1.1.2"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/cece731f8cc25d494c6589cc681e5c01a93867d895c75889973afa1a255f163c286e390baa7bc028858eaabe9f6b57270d0ca6377356f652c5557c1c7a41ccce
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-primitive@npm:2.1.3":
+  version: 2.1.3
+  resolution: "@radix-ui/react-primitive@npm:2.1.3"
+  dependencies:
+    "@radix-ui/react-slot": "npm:1.2.3"
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 10c0/fdff9b84913bb4172ef6d3af7442fca5f9bba5f2709cba08950071f819d7057aec3a4a2d9ef44cf9cbfb8014d02573c6884a04cff175895823aaef809ebdb034
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-slot@npm:1.2.3, @radix-ui/react-slot@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@radix-ui/react-slot@npm:1.2.3"
+  dependencies:
+    "@radix-ui/react-compose-refs": "npm:1.1.2"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/5913aa0d760f505905779515e4b1f0f71a422350f077cc8d26d1aafe53c97f177fec0e6d7fbbb50d8b5e498aa9df9f707ca75ae3801540c283b26b0136138eef
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-use-callback-ref@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@radix-ui/react-use-callback-ref@npm:1.1.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/5f6aff8592dea6a7e46589808912aba3fb3b626cf6edd2b14f01638b61dbbe49eeb9f67cd5601f4c15b2fb547b9a7e825f7c4961acd4dd70176c969ae405f8d8
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-use-is-hydrated@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@radix-ui/react-use-is-hydrated@npm:0.1.0"
+  dependencies:
+    use-sync-external-store: "npm:^1.5.0"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/635079bafe32829fc7405895154568ea94a22689b170489fd6d77668e4885e72ff71ed6d0ea3d602852841ef0f1927aa400fee2178d5dfbeb8bc9297da7d6498
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-use-layout-effect@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@radix-ui/react-use-layout-effect@npm:1.1.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/9f98fdaba008dfc58050de60a77670b885792df473cf82c1cef8daee919a5dd5a77d270209f5f0b0abfaac78cb1627396e3ff56c81b735be550409426fe8b040
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.40.2":
   version: 4.40.2
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.40.2"
@@ -1212,6 +1336,8 @@ __metadata:
   resolution: "aigendrug-cid-2025-web@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.25.0"
+    "@radix-ui/react-avatar": "npm:^1.1.10"
+    "@radix-ui/react-slot": "npm:^1.2.3"
     "@tailwindcss/postcss": "npm:^4.1.6"
     "@tanstack/react-query": "npm:^5.79.0"
     "@types/node": "npm:^22.15.17"
@@ -1226,16 +1352,16 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.19"
     globals: "npm:^16.0.0"
     knip: "npm:^5.55.1"
-    lucide-react: "npm:^0.509.0"
+    lucide-react: "npm:^0.511.0"
     postcss: "npm:^8.5.3"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     react-router: "npm:^7.6.0"
     react-router-dom: "npm:^7.6.1"
-    tailwind-merge: "npm:^3.2.0"
+    tailwind-merge: "npm:^3.3.0"
     tailwindcss: "npm:^4.1.6"
     tailwindcss-animate: "npm:^1.0.7"
-    tw-animate-css: "npm:^1.2.9"
+    tw-animate-css: "npm:^1.3.3"
     typescript: "npm:~5.8.3"
     typescript-eslint: "npm:^8.30.1"
     vite: "npm:^6.3.5"
@@ -2665,12 +2791,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.509.0":
-  version: 0.509.0
-  resolution: "lucide-react@npm:0.509.0"
+"lucide-react@npm:^0.511.0":
+  version: 0.511.0
+  resolution: "lucide-react@npm:0.511.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/eb7434a99738d2a3b3a193c4e0cf51691a06223ec8eda514ea7fd96cdbd311069d25353cd9e720810e5c7ba3891186de6a0463c3ac5382cc1d981938847b9b95
+  checksum: 10c0/bf09dd73cf2233abea90506ad31a91739555d761062722acbe045cb73e274f035b196472de0971a8a8f0645b2b54e3f21b8c1980fe87c909ca93171a9c28428a
   languageName: node
   linkType: hard
 
@@ -3621,10 +3747,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-merge@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "tailwind-merge@npm:3.2.0"
-  checksum: 10c0/294f6c2db0df74405bff126107107426c3126a70a1717d78e8d6811db65546c9bb3d61282bdb8d9fbded23f6bc8ec3e8e61031a4f53265f90b7f3dba558f88f4
+"tailwind-merge@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "tailwind-merge@npm:3.3.0"
+  checksum: 10c0/a50cd141100486f98541dfab3705712af5860556689b7496dc6b0284374f02d12d5471f0f40035f6bb8b1c749c422060a1f3e5f8900057d8a7786b111c8472e6
   languageName: node
   linkType: hard
 
@@ -3707,10 +3833,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tw-animate-css@npm:^1.2.9":
-  version: 1.2.9
-  resolution: "tw-animate-css@npm:1.2.9"
-  checksum: 10c0/ffbd6dfbb34490a8752b185b40192168ce4bfa69949d153dc831d9471dec2758501f27f1784b6615de7da73a546d01d7201ed691f5220fe3e0a53694cb275a3a
+"tw-animate-css@npm:^1.3.3":
+  version: 1.3.3
+  resolution: "tw-animate-css@npm:1.3.3"
+  checksum: 10c0/7e8313713d1c205fcd5baabb5086f363932faf6e738f79aa7481f5636a7a14cc971f0d5fc711d0e06b80c5329b2efb0e100b88fa488d7f658bb7ebbfd369c540
   languageName: node
   linkType: hard
 
@@ -3806,6 +3932,15 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "use-sync-external-store@npm:1.5.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/1b8663515c0be34fa653feb724fdcce3984037c78dd4a18f68b2c8be55cc1a1084c578d5b75f158d41b5ddffc2bf5600766d1af3c19c8e329bb20af2ec6f52f4
   languageName: node
   linkType: hard
 
