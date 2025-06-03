@@ -1,4 +1,4 @@
-import type { ChatSession } from "./schemas";
+import type { ChatMessage, ChatSession } from "./schemas";
 const DOMAIN = import.meta.env.VITE_DOMAIN;
 export const chatService = {
   async getChatSessionsList(): Promise<ChatSession[]> {
@@ -21,5 +21,21 @@ export const chatService = {
     }
     const data = await res.json();
     return { session_id: data.session_id };
+  },
+  async deleteChatSession(sessionId: string): Promise<void> {
+    const res = await fetch(`${DOMAIN}/chat/session/${sessionId}`, {
+      method: "DELETE",
+    });
+    if (!res.ok) {
+      throw new Error("Failed to delete chat session");
+    }
+  },
+  async getMessagesBySessionId(sessionId: string): Promise<ChatMessage[]> {
+    const res = await fetch(`${DOMAIN}/chat/message/${sessionId}`);
+    if (!res.ok) {
+      throw new Error("Failed to fetch messages for session");
+    }
+    const data = await res.json();
+    return data;
   },
 };

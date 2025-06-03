@@ -1,27 +1,38 @@
-import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { chatService } from "@/api/apis";
-import type { ChatSession } from "@/api/schemas";
 import { useChatModal } from "@/context/ChatModalContext";
+import { useState } from "react";
+import { ChatDialog } from "./ChatDialog";
+import { ChatSessionDialog } from "./ChatSessionDialog";
 
 export const FloatingChatButton = () => {
   const { isOpen, setIsOpen } = useChatModal();
-  const navigate = useNavigate();
+  const [selectedSessionId, setSelectedSessionId] = useState<string | null>(
+    null
+  );
 
   const { data: sessions, isLoading } = useGetSessions();
   const handleSessionClick = (sessionId: string) => {
-    navigate(`/chat/${sessionId}`);
+    setSelectedSessionId(sessionId);
   };
   const { createSession, isPending: isCreating } = useCreateSession({
     onSuccess: ({ session_id }) => {
-      navigate(`/chat/${session_id}`);
+      setSelectedSessionId(session_id);
+      setIsOpen(true);
     },
   });
   const handleCreateSession = () => {
     if (isCreating) return;
     createSession();
+  };
+  const { deleteSession } = useDeleteSession();
+  const handleDeleteSession = (sessionId: string) => {
+    deleteSession(sessionId);
+    if (selectedSessionId === sessionId) {
+      setSelectedSessionId(null);
+    }
   };
 
   if (isLoading) {
@@ -46,36 +57,21 @@ export const FloatingChatButton = () => {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="w-[320px] max-h-[70vh] overflow-y-auto">
-        <h2 className="text-lg font-semibold">Chat Sessions</h2>
-
-        <div className="flex justify-end ">
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={handleCreateSession}
-            disabled={isCreating}
-          >
-            + New
-          </Button>
-        </div>
-
-        <div className="space-y-2">
-          {sessions.map((s: ChatSession) => (
-            <div
-              key={s.session_id}
-              className="p-3 bg-gray-100 hover:bg-gray-200 rounded cursor-pointer"
-              onClick={() => handleSessionClick(s.session_id)}
-            >
-              <div className="font-medium">
-                Session {s.session_id.slice(-2).toUpperCase()}
-              </div>
-              <div className="text-xs text-gray-500">
-                {new Date(s.created_at).toLocaleString()}
-              </div>
-            </div>
-          ))}
-        </div>
+      <DialogContent className="w-[600px] max-h-[70vh] overflow-y-auto">
+        {selectedSessionId ? (
+          <ChatDialog
+            sessionId={selectedSessionId}
+            onBack={() => setSelectedSessionId(null)}
+          />
+        ) : (
+          <ChatSessionDialog
+            sessions={sessions}
+            isCreating={isCreating}
+            handleCreateSession={handleCreateSession}
+            handleSessionClick={handleSessionClick}
+            handleDeleteSession={handleDeleteSession}
+          />
+        )}
       </DialogContent>
     </Dialog>
   );
@@ -108,4 +104,23 @@ const useCreateSession = ({
     },
   });
   return { createSession, isPending };
+};
+
+const useDeleteSession = () => {
+  const queryClient = useQueryClient();
+
+  const { mutate: deleteSession } = useMutation({
+    mutationFn: (sessionId: string) => chatService.deleteChatSession(sessionId),
+    onSuccess: async () => {
+      await queryClient.invalidateQueries({
+        queryKey: ["getChatSessionsList"],
+        exact: true,
+      });
+    },
+    onError: (error) => {
+      console.error("Error deleting chat session:", error);
+    },
+  });
+
+  return { deleteSession };
 };
