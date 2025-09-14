@@ -2,7 +2,7 @@
 
 A modern React-based web application that provides an intelligent chat interface for drug research assistance. This client application connects to an NLP-powered backend to help researchers discover, summarize, and access academic papers related to drug research.
 
-## 🚀 Features
+## Features
 
 - **Interactive Chat Interface**: Real-time chat with AI assistant for drug research queries
 - **Paper Recommendations**: Get AI-powered recommendations for relevant research papers
@@ -12,7 +12,7 @@ A modern React-based web application that provides an intelligent chat interface
 - **Modern UI**: Clean, responsive interface built with Tailwind CSS and Radix UI
 - **Real-time Communication**: WebSocket integration for live chat experience
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend Framework**: React 19 with TypeScript
 - **Build Tool**: Vite 6
@@ -23,13 +23,13 @@ A modern React-based web application that provides an intelligent chat interface
 - **Icons**: Lucide React
 - **Package Manager**: Yarn 4
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v18 or higher)
 - Yarn 4.x
 - Backend API server running (see backend documentation)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
