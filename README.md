@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# AI Drug Research Assistant - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based web application that provides an intelligent chat interface for drug research assistance. This client application connects to an NLP-powered backend to help researchers discover, summarize, and access academic papers related to drug research.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Chat Interface**: Real-time chat with AI assistant for drug research queries
+- **Paper Recommendations**: Get AI-powered recommendations for relevant research papers
+- **Paper Summarization**: Automatically summarize research papers
+- **PDF Access**: Direct links to download research paper PDFs
+- **Session Management**: Persistent chat sessions with message history
+- **Modern UI**: Clean, responsive interface built with Tailwind CSS and Radix UI
+- **Real-time Communication**: WebSocket integration for live chat experience
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React 19 with TypeScript
+- **Build Tool**: Vite 6
+- **Styling**: Tailwind CSS 4 with custom animations
+- **UI Components**: Radix UI primitives with shadcn/ui
+- **State Management**: TanStack Query (React Query) for server state
+- **Routing**: React Router v7
+- **Icons**: Lucide React
+- **Package Manager**: Yarn 4
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📋 Prerequisites
+
+- Node.js (v18 or higher)
+- Yarn 4.x
+- Backend API server running (see backend documentation)
+
+## 🚀 Getting Started
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd nlp-2025-project-client
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn install
 ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory:
+
+```env
+VITE_DOMAIN=http://localhost:8000
+```
+
+### Development
+
+Start the development server:
+
+```bash
+yarn dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+```bash
+yarn build
+```
+
+
+
